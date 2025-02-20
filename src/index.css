@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color:var(--TEXTCOLORONE);
+    font-family: var(--RUBIK);
+}
+
+
+:root{
+    --ROOTBACKCOLOR: #01203a;
+
+    /* BODY COLORS */
+    --BACKGROUNDCOLORONE: #011627;
+    --BACKGROUNDCOLORTWO: #F4FAFF;
+    --BACKGROUNDCOLORTHREE: #e4e9ed;
+
+    /* #d8e0e7 */
+
+    /* TEXT COLORS */
+    --TEXTCOLORONE: #fff;
+    --TEXTCOLORTWO: #000;
+    --TEXTCOLORTHREE: #FFD6DD;
+
+    /* FONTS */
+    --RUBIK: "Rubik", serif;
+
+    /* BUTTON COLORS */
+    --BUTTONCOLORONE: #2872FA;
+
+    /* SPECIAL COLORS */
+    --KINDARED: #E71D36;
+
+    /* CORRECT */
+    --CORRECT: #679F2F;
+
+    /* WRONG */
+    --WRONG: #FF7D7D;
+}
+
+body{
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+    padding: 0;
+}
+
+
+#root{
+    width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    background-color: var(--ROOTBACKCOLOR);
+    overflow: hidden;
+    border-radius: 0;
+}
+
+main{
+    width: clamp(340px, 100%, 390px);
+    height: 100dvh;
+    max-height: 100dvh;
+    background-color: var(--BACKGROUNDCOLORONE);
+    margin-inline: auto;
+    box-shadow: 0 0 10px 2px #000;
+    overflow: hidden;
+    position: relative;
+}
+
+.signup-login{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: 1000;
+    background: url("assets/back/sign/signbackback.svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-login .back-img-ball{
+    position: absolute;
+    object-fit: contain;
+}

@@ -1,0 +1,38 @@
+.hamburger-ctn{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: 16px;
+    height: 13px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    z-index: 100;
+}
+
+.hamburger-btn{
+    width: 15px;
+    height: 0.3px;
+    background-color: #fff;
+    position: relative;
+}
+
+.hamburger-btn::after{
+    content: "";
+    width: 70%;
+    height: inherit;
+    background-color: inherit;
+    position: absolute;
+    top: -5.7px;
+    right: 0;
+}
+
+.hamburger-btn::before{
+    content: "";
+    width: 100%;
+    height: inherit;
+    background-color: inherit;
+    position: absolute;
+    bottom: -5.7px;
+    right: 0;
+}

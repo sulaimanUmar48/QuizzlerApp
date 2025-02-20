@@ -1,0 +1,167 @@
+.Signup{
+    width: 343px;
+    height: 445px;
+    max-width: 343px;
+    max-height: 445px;
+    border:0.7px solid #fff;
+    border-radius: 23px;
+    backdrop-filter: blur(20px);
+    background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255, 255, 255, 0.048));
+}
+
+    
+.Signup form{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: inherit;
+    width: inherit;
+    max-width: inherit;
+    max-height: inherit;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.Signup form p.title{
+    font-size: 26px;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+}
+
+.Signup form p.title::after{
+    content: "";
+    width: 150%;
+    position: absolute;
+    bottom: -10px;
+    height: 150%;
+    box-shadow: inset 0 3px 4px rgba(0,0,0,0.25);
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+}
+
+.Signup form fieldset{
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.Signup .signup-details{
+    display: flex;
+    flex-flow: column;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+}
+
+.Signup .signup-details label{
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    font-size: 14px;
+    transition: 300ms solid;
+}
+
+.Signup .signup-details label:has(+ input:focus){
+    transform: scale(0.8) translate(-45px, -30px);
+    transition: 300ms ease;
+}
+
+.Signup .signup-details button{
+    position: absolute;
+    right: -5px;
+    bottom: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    z-index: 100;
+
+}
+
+.Signup .signup-details button img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Signup .signup-details input{
+    width: 255px;
+    height: 43px;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    font-size: 14px;
+    padding-inline: 30px;
+    outline: 0;
+}
+
+.Signup .signup-details img{
+    width: 17px;
+    position: absolute;
+    top: 15px;
+}
+
+.Signup .signup-details:nth-child(3) img{
+    width: 14px;
+}
+
+.Signup form .swap{
+    font-size: 12px;
+}
+
+.Signup form .swap button{
+    color: #f27281;
+    text-decoration: underline;
+    user-select: none;
+    border: 0;
+    background-color: transparent;
+}
+
+.Signup form button.final{
+    width: 101px;
+    height: 41px;
+    padding-block: 10px;
+    border-radius: 6px;
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #fff;
+}
+
+.Signup form .loader{
+    position: absolute;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    aspect-ratio: 1 / 1;
+    border-bottom-color: transparent;
+    right: 80px;
+    bottom: 52px;
+    animation: loader 1s linear infinite forwards;
+    opacity: 0;
+}
+
+.Signup form .loader.active{
+    opacity: 1;
+}
+
+
+@keyframes loader {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

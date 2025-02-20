@@ -1,0 +1,1 @@
+export const options = ["Mt. KIlimanjaro", "Mt. Fuji", "Mt. Everest", "The Grand Canyon"]

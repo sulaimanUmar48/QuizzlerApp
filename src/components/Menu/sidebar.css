@@ -1,0 +1,82 @@
+.SideBar{
+    width: 267px;
+    height: 100%;
+    background-color: var(--BACKGROUNDCOLORTWO);
+    border-radius: 0 20px 20px 0;
+    color: #000;
+    padding: 56px 32px;
+    position: absolute;
+    z-index: 200;
+    transition: 600ms ease;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    left: -300px;
+    background-image: url("../../assets/back/planets.svg");
+}
+
+.SideBar.active{
+    left: 0px;
+    transition: 600ms ease;
+}
+
+.SideBar .page-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.SideBar .page-title p{
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.SideBar .page-title p span{
+    color: #FF7373;
+}
+
+.SideBar .page-title button{
+    width: 26px;
+    aspect-ratio: 1 / 1;
+    background-color: #E7E7E7;
+    border: 0;
+    border-radius: 50%;
+}
+
+.SideBar .nav-btns{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.SideBar .nav-btn-ctn{
+    color: #000;
+    height: 46px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-inline: 25px;
+    gap: 10px;
+    font-size: 20px;
+    position: relative;
+    text-decoration:  none;
+}
+
+.SideBar .nav-btns hr{
+    margin-block: 30px;
+}
+
+.SideBar .nav-btns .nav-btn-ctn.active{
+    background-color: #E9E9E9;
+}
+
+.SideBar .nav-btns .nav-btn-ctn.active::before{
+    content: "";
+    width: 7px;
+    height: 40px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    border-radius: 0 8px 8px 0;
+}

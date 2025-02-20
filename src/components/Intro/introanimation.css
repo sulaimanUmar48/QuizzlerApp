@@ -1,0 +1,137 @@
+.loading-screen{
+    width: 100%;
+    height: 100dvh;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 2000;
+    animation: fadeOut 500ms linear 6200ms forwards;
+    
+}
+
+.loading-screen .animate-ctn{
+    width: 340px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+
+}
+
+.loading-screen .ball{
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(180deg, #b5ddfb 0%, #88CAFE 40%, #88CAFE 80%, rgba(255, 255, 255, 0.253) 100%);
+    box-shadow: inset 3px 10px 4px 0 rgba(255, 255, 255, 0.42);
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    z-index: 100;
+    transform: scale(0);
+    animation: ball 1s linear 1000ms forwards , 
+               ballmoveleft 500ms linear 2500ms forwards, 
+               moveToRight 500ms linear 3900ms forwards,
+               coverScreen 500ms linear 5000ms forwards;
+
+
+}
+
+.loading-screen .logo{
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    -webkit-text-stroke: #000;
+    -webkit-text-stroke-width: 1.5px;
+    overflow: hidden;
+    z-index: 50;
+}
+
+.loading-screen .logo::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: #fff;
+    animation: displayText 400ms linear 2550ms forwards;
+
+}
+
+.loading-screen .logo p{
+    color: #000;
+    font-size: 40px;
+}
+
+.loading-screen .logo p span{
+    color: red;
+}
+
+
+@keyframes ball {
+    0%{
+        transform: scale(0);
+    }
+
+    40%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(0.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes ballmoveleft {
+    0%{
+        right: 20px;
+    }
+    100%{
+        right: 260px;
+    }
+}
+
+@keyframes displayText {
+    0%{
+        right: 0;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+@keyframes moveToRight{
+    0%{
+        right: 260px;
+    }
+    100%{
+        right: 138px;
+    }
+}
+
+@keyframes coverScreen{
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(30);
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+        pointer-events: none;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
