@@ -3,7 +3,7 @@ import worldImg from '../../assets/titleimg/fluent-mdl2_world.svg'
 import filterImg from '../../assets/titleimg/mdi_filter-cog-outline.svg'
 
 import { Quiz } from '../Quiz_list/Quiz'
-import { Filter } from './Filter'
+// import { Filter } from './Filter'
 import { useEffect, useState, useRef } from 'react'
 import { collection, onSnapshot, query, where } from 'firebase/firestore'
 import { db, quizColRef } from '../../firebase/firebase'
