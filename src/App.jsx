@@ -6,8 +6,8 @@ import { Profile } from './components/Profile/Profile.jsx';
 import { PlayQuiz } from './components/Play_Quiz/PlayQuiz.jsx';
 import { Category } from './components/Category/Category.jsx';
 import { SideBar } from './components/Menu/SideBar.jsx';
-import { LogIn } from './components/LogIn_SignIn/Login.jsx';
-import { SignUp } from './components/LogIn_SignIn/SignUp.jsx';
+import { LogIn } from './components/LogInSignIn/LogIn.jsx';
+import { SignUp } from './components/LogInSignIn/SignUp.jsx';
 import { IntroAnimation } from './components/Intro/IntroAnimation.jsx';
 
 

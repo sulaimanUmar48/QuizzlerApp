@@ -1,7 +1,6 @@
 import './login.css'
 import passwordIcon from '../../assets/Log_Sign_Icons/passwordIcon.svg'
 import emailIcon from '../../assets/Log_Sign_Icons/emailIcon.svg'
-import userIcon from '../../assets/Log_Sign_Icons/userIcon.svg'
 import passVis from '../../assets/icons/Passwordeyevisible.svg'
 import passHid from '../../assets/icons/Passwordeyehidden.svg'
 
@@ -56,7 +55,7 @@ export const LogIn = (props) => {
             <p className='title'>Log In</p>
             <fieldset>
                 <div className="login-details">
-                    <img src={userIcon} />
+                    <img src={emailIcon} />
                     <label htmlFor="username">Email</label>
                     <input type="email" name='email' onChange={(e) => handleInputChange(e)}/>
                 </div>
