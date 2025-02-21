@@ -86,9 +86,6 @@ export const PlayQuiz = (props) => {
     }
 
     const addCompletedQuiz = async () => {
-        console.log("hEYYYYYYYYYYYYYYY", finalPoints)
-        console.log(quiz.id)
-        console.log(quiz.name)
         await setDoc(doc(db, 'User', props.userData.id, 'Completed_Quizzes', localStorage.getItem("quizId")), {
             quiz_id: quiz.id,
             quiz_points: finalPoints,

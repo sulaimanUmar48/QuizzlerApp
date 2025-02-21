@@ -3,7 +3,6 @@ import worldImg from '../../assets/titleimg/fluent-mdl2_world.svg'
 import filterImg from '../../assets/titleimg/mdi_filter-cog-outline.svg'
 
 import { Quiz } from '../Quiz_list/Quiz'
-// import { Filter } from './Filter'
 import { useEffect, useState, useRef } from 'react'
 import { collection, onSnapshot, query, where } from 'firebase/firestore'
 import { db, quizColRef } from '../../firebase/firebase'
@@ -34,7 +33,6 @@ export const Discover = (props) => {
           snapshot.docs.forEach((doc) => {
               quizDb.push({...doc.data(), id: doc.id})
           })
-          console.log(quizDb)
           setQuiz(quizDb)
       })
   
@@ -44,12 +42,10 @@ export const Discover = (props) => {
 
   const showFilterMenu = () => {
     filterMenu.current.classList.add("open")
-    console.log("Opened")
   }
 
   return (
     <div className='Discover'>
-      <Filter Ref={filterMenu}/>
       <span className='page-title'>
         DISCOVER 
         <img src={worldImg}/>

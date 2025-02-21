@@ -25,10 +25,6 @@ export const SignUp = (props) => {
         const email = data.get("email")
         const password = data.get("password")
         const username = data.get("username")
-        // signUpUser(email, password)  
-        //     .then((user) => {
-        //         console.log(user.dcos)
-        //     })
         props.setLoader(true)
 
         try{
@@ -55,7 +51,7 @@ export const SignUp = (props) => {
 
         }
         catch(err){
-            console.log(err.code)
+            alert(err.code)
         }
     }
 

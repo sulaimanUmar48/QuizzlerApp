@@ -46,7 +46,6 @@ function App() {
       if(user){
         localStorage.setItem("userLoggedIn", JSON.stringify(true))
         setUserState(JSON.parse(localStorage.getItem("userLoggedIn")))
-        console.log(user)
         // setLoggedIn(true)
         onSnapshot(doc(db, 'User', user.uid), (snapshot) => {
           let userDat = { ...snapshot.data(), id: snapshot.id}
@@ -63,8 +62,6 @@ function App() {
         onSnapshot(quizColRef, (snapshot)=>{
           let quiz = []
           snapshot.docs.forEach( x => quiz.push({...x.data(), id: x.id}))
-          console.log(quiz)
-          console.log(userDataRef.current.id)
           
           quiz.forEach( x => {
             setDoc(doc(db, 'User', user.uid, 'Quizzes', x.id), {
@@ -96,7 +93,6 @@ function App() {
         setCreationDate(`${month} ${year}`)
 
       }else {
-        console.log("User Logged out")
         setTimeout(() => {
           setUserData(JSON.parse(localStorage.getItem("userLoggedIn")))
         }, 2000)
@@ -110,9 +106,9 @@ function App() {
     setShowLogin(prev => !prev)
   }
 
-  useEffect(()=>{
-    console.log(currentPlayQuizId)
-  }, [currentPlayQuizId])
+  // useEffect(()=>{
+    
+  // }, [currentPlayQuizId])
 
   return (
     <BrowserRouter>
