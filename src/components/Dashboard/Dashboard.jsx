@@ -5,8 +5,8 @@ import { onSnapshot, setDoc, doc, getDocs, collection } from 'firebase/firestore
 import { useEffect, useRef, useState } from 'react'
 import { db, quizColRef, userDocRef } from '../../firebase/firebase'
 
-import ballTop from '../../assets/back/Dashboard/dashboardbackballtop.svg'
-import ballBottom from '../../assets/back/Dashboard/dashboardbackballbottom.svg'
+import ballTop from '../../assets/back/Dashboard/dashboardbackballtop.png'
+import ballBottom from '../../assets/back/Dashboard/dashboardbackballbottom.png'
 
 
 
@@ -18,20 +18,7 @@ export const Dashboard = (props) => {
 
     const [time, setTime] = useState(0)
 
-
-//   useEffect(()=> {
-//     let timeOfTheDay;
-//     const intervalID = setInterval(()=>{
-//         timeOfTheDay = new Date().getHours()
-//         console.log(timeOfTheDay)
-//         setTime(timeOfTheDay)
-//     }, 2000)
-
-//     return () => clearInterval(intervalID)
     
-//   }, [])
-
-
     const mappedQuiz = props.quizData.map((x) => { 
         // console.log({...x}) 
         return <Quiz key={x.id} {...x} userId={props.userData.id}  />

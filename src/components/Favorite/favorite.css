@@ -4,7 +4,7 @@
     max-width: 100%;
     max-height: 100%;
     border:0.1px solid transparent;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../assets/back/FavCat/favcatbackback.svg");
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../assets/back/FavCat/favcatbackback.png");
     background-size: cover;
 }
 

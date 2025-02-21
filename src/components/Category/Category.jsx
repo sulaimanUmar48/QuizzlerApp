@@ -55,6 +55,8 @@ export const Category = (props) => {
                 <li onClick={(e) => {setCurrent(e.target.textContent)}}>Solar System</li>
                 <hr />
                 <li onClick={(e) => {setCurrent(e.target.textContent)}}>Entertainment</li>
+                <hr />
+                <li onClick={(e) => {setCurrent(e.target.textContent)}}>Mythology</li>
             </ul>        
         </div>
         <div className="quiz-ctn">

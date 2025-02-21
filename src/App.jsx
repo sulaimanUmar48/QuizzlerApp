@@ -12,7 +12,7 @@ import { IntroAnimation } from './components/Intro/IntroAnimation.jsx';
 
 
 import './index.css'
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useMemo } from 'react'
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router'
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db, quizColRef } from './firebase/firebase.js';

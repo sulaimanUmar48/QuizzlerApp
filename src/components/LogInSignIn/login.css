@@ -160,7 +160,7 @@
     aspect-ratio: 1 / 1;
     border-bottom-color: transparent;
     right: 80px;
-    bottom: 52px;
+    bottom: 56px;
     animation: loader 1s linear infinite forwards;
     opacity: 0;
 }
