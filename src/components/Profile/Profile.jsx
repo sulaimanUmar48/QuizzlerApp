@@ -2,9 +2,8 @@ import './profile.css'
 
 import userIcon from '../../assets/icons/User.svg'
 import largeDummyImg from '../../assets/Dummy images/largedummyprof.png'
-import editIcon from '../../assets/icons/Edit.svg'
 import whiteEditIcon from '../../assets/icons/Whiteedit.svg'
-import { db, quizDocRef, userDocRef } from '../../firebase/firebase'
+import { db, quizDocRef } from '../../firebase/firebase'
 import { useEffect, useRef, useState } from 'react'
 import { collection, doc, onSnapshot, orderBy, query, updateDoc } from 'firebase/firestore'
 
@@ -25,7 +24,6 @@ export const Profile = (props) => {
   const input = useRef(null)
 
   useEffect(()=>{
-    console.log(props.userData.id)
     onSnapshot(collection(db, 'User', props.userData.id, 'Completed_Quizzes'), (snapshot)=>{
       setCompletedQuiz(snapshot.docs.length)
       updateDoc(doc(db, 'User', props.userData.id), {
@@ -37,8 +35,6 @@ export const Profile = (props) => {
 
  
   useEffect(()=>{
-    console.log("Hey threeeeeeeee", props.userData.id)
-    console.log(props.userData)
 
     // CODE FOR ORDERING THE QUERY FOR RANKS
 
@@ -57,21 +53,19 @@ export const Profile = (props) => {
   }, [])
 
 
-  useEffect(()=>{
-      const unsubscribe = onSnapshot(quizDocRef, (snapshot) => {
-          let quizDb = {...snapshot.data(), id: snapshot.id}
-          setQuiz(quizDb)
-          console.log(quizDb)
+  // useEffect(()=>{
+  //     const unsubscribe = onSnapshot(quizDocRef, (snapshot) => {
+  //         let quizDb = {...snapshot.data(), id: snapshot.id}
+  //         setQuiz(quizDb)
 
-      })
+  //     })
 
-      return unsubscribe
-  },[])
+  //     return unsubscribe
+  // },[])
 
   const usernameEditFunction = () => {
     input.current.classList.toggle("active")
     setEditName( prev => !prev)
-    console.log(editName)
 
     if(editName){
       setCount(count + 1)
