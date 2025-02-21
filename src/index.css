@@ -56,7 +56,6 @@ body{
     background-color: var(--ROOTBACKCOLOR);
     overflow: hidden;
     border-radius: 0;
-    background-color: yellow;
 }
 
 main{
