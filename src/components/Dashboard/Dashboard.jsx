@@ -1,9 +1,7 @@
 import dummyProfImg from '../../assets/Dummy images/dummyprofimg.png'
 import './Dashboard.css'
 import { Quiz } from '../Quiz_list/Quiz'
-import { onSnapshot, setDoc, doc, getDocs, collection } from 'firebase/firestore'
 import { useEffect, useRef, useState } from 'react'
-import { db, quizColRef, userDocRef } from '../../firebase/firebase'
 
 import ballTop from '../../assets/back/Dashboard/dashboardbackballtop.png'
 import ballBottom from '../../assets/back/Dashboard/dashboardbackballbottom.png'
@@ -11,23 +9,27 @@ import ballBottom from '../../assets/back/Dashboard/dashboardbackballbottom.png'
 
 
 export const Dashboard = (props) => {
-
-    const [quiz, setQuiz] = useState([])
-    const [preQuiz, setPreQuiz] = useState([])
-    const [pageLoading, setPageLoading] = useState(true)
-
     const [time, setTime] = useState(0)
-
     
+
     const mappedQuiz = props.quizData.map((x) => { 
-        // console.log({...x}) 
         return <Quiz key={x.id} {...x} userId={props.userData.id}  />
     })
+
+    useEffect(()=>{
+        const timeInterval = setInterval(()=>{
+            const currentTime = new Date().getHours()
+            setTime(currentTime)
+            console.log(currentTime)
+        }, 600000)
+        return () => {clearInterval(timeInterval)}
+    }, [])
+
 
 
   return (
     <>
-        {pageLoading && <div className="dashboard">
+        <div className="dashboard" >
             <img src={ballTop} className='ball-top'/>
             <img src={ballBottom} className='ball-bottom'/>
             <div className="greet-ctn">
@@ -63,17 +65,17 @@ export const Dashboard = (props) => {
                     </div>
                 </div>
             </div> */}
-            <div className='classification'>
+
+            <div className='classification' >
                 <div className="class">
-                    {/* <span >Categories</span> */}
                     <span className='active'>Quiz</span>
                 </div>
-                <div className="quiz-container">
+                <div className="quiz-container" >
                     {mappedQuiz}
                 </div>
             </div>
             
-        </div>}
+        </div>
     </>
   )
 }
