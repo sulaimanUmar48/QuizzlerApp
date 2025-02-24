@@ -71,7 +71,7 @@
 
 .Discover .quiz-ctn{
     width: 100%;
-    height: 100%;
+    height: calc(100% - 250px);
     background-color: var(--BACKGROUNDCOLORTHREE );
     background-image: url('../../assets/back/planets.png');
     border-radius: 48px 48px 0 0;

@@ -6,6 +6,7 @@
     border:0.1px solid transparent;
     user-select: none;
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../assets/back/FavCat/favcatbackback.png");
+    background-size: cover;
 }
 
 .Category .page-title{
@@ -74,7 +75,7 @@
 }
 
 .Category .quiz-ctn{
-    height: 100%;
-    /* background-color: #660012; */
-    overflow: scroll;
+    height: calc(100% - 220px);
+    overflow-y: scroll;
+    
 }
