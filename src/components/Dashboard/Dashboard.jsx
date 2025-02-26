@@ -21,7 +21,7 @@ export const Dashboard = (props) => {
             const currentTime = new Date().getHours()
             setTime(currentTime)
             console.log(currentTime)
-        }, 600000)
+        }, 1000)
         return () => {clearInterval(timeInterval)}
     }, [])
 
@@ -37,7 +37,7 @@ export const Dashboard = (props) => {
                     <p className='greet-time'><i className="fa-solid fa-sun"></i>
                         {
                         time > 0 && time < 12 ? "GOODMORING" :
-                        time >= 12 && time < 4 ? "GOODAFTERNOON" :
+                        time >= 12 && time < 17 ? "GOODAFTERNOON" :
                          "GOODEVENING"
                         }
                      </p>
